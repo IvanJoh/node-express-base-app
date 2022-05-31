@@ -7,7 +7,7 @@ All the features of this base application will be listed here and how to use the
 ### Routers
 Configure multiple routers using the example found in `interfaces/http/routers/test.js`
 ### Loggers
-You can easily configure loggers that write to the console or to files inside the the `logs` folder
+You can easily configure loggers that write to the console or to files inside the `logs` folder
 To setup a logger, change the `config/config.js` file under `config.logging.loggers`
 ```
 config.logging.loggers = [
@@ -33,7 +33,7 @@ config.logging.loggers = [
 Define a logger with the properties below:
  - `name` (required) is how you use the logger in your code (i.e. `app.loggers.debug_api_logger.info("Hi there")`)
  - `hideFromConsole` (optional) set this to `false` if you want to only log to a file and not see in console
- - `files` Specificy all the files you want to log to with a `filename` (including the extension) and a [logging](https://github.com/winstonjs/winston#logging-levels) `level`
+ - `files` (optional) Specificy all the files you want to log to with a `filename` (including the extension) and a [logging](https://github.com/winstonjs/winston#logging-levels) `level`
 
 
 *Thank you for reading*
