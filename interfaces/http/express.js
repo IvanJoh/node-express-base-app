@@ -9,7 +9,7 @@ module.exports = async app => {
 
   // MIDDLEWARE
   _express.use((req, res, next) => {
-    console.log("Main Express Middleware");
+    app.loggers.main.info("Express router triggered...");
     next();
   });
 
@@ -22,7 +22,7 @@ module.exports = async app => {
   // SERVER INSTANCE
   app.interfaces.http = _express.listen(
     PORT,
-    () => console.log(`Express server now listening on port : ${PORT}`)
+    () => app.loggers.main.info(`Express server now listening on port : ${PORT}`)
   );
 
   return app

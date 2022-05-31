@@ -5,7 +5,7 @@ module.exports = async app => {
 
   // MIDDLEWARE
   router.use((req, res, next) => {
-    console.log("Test router fired off");
+    app.loggers.main.info("Test router triggered...");
     next();
   });
 
